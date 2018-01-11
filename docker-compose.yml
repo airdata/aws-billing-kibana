@@ -23,7 +23,7 @@ services:
     command: bash -c "python -u /aws-elk-billing/orchestrate.py"
 
   logstash:
-    image: logstash:5-alpine
+    image: logstash:5
     ports:
     - 5140:5140
     depends_on:
@@ -31,11 +31,12 @@ services:
     links:
     - elasticsearch:elasticsearch
     volumes:
-    - ./logstash.conf:/logstash.conf
+     - ./logstash.conf:/logstash.conf
+     - ./template.json:/template.json
     command: "logstash -f /logstash.conf"
 
   kibana:
-    image: priceboard/docker-alpine:kibana
+    image: kibana:5
     volumes:
     - ./kibana.yml:/opt/kibana/config/kibana.yml
     ports:
@@ -46,7 +47,7 @@ services:
     - elasticsearch:elasticsearch
 
   elasticsearch:
-    image: elasticsearch:5-alpine
+    image: elasticsearch:5
     ports:
     - 9200:9200
     - 9300:9300
