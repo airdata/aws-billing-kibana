@@ -1,3 +1,4 @@
+*s3-bucket-tagger
 *.html
 #Use run.py for testing purpose only
 run.py
