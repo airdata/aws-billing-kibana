@@ -3,6 +3,7 @@
 version: '2'
 services:
   aws-elk-billing:
+    image: airdata/aws-billing-kibana
     build: .
     environment:
     - DEBIAN_FRONTEND=noninteractive
