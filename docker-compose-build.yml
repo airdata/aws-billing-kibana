@@ -11,14 +11,6 @@ services:
     - ENV=prod
     volumes:
     - .:/aws-elk-billing
-    depends_on:
-    - kibana
-    - logstash
-    - elasticsearch
-    links:
-    - kibana:kibana
-    - logstash:logstash
-    - elasticsearch:elasticsearch
     env_file:
     - prod.env.example
     command: bash -c "python -u /aws-elk-billing/orchestrate.py"

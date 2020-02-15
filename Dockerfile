@@ -34,7 +34,7 @@ RUN pip install nose
 
 WORKDIR /aws-elk-billing
 
-ENV TZ=Asia/Kolkata
+ENV TZ=Europe/Sofia
 RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
 
 CMD ["tail -f /dev/null"]
