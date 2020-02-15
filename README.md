@@ -1,4 +1,4 @@
-# aws-elk-billing [![Build Status](https://travis-ci.org/PriceBoardIn/aws-elk-billing.svg?branch=master)](https://travis-ci.org/PriceBoardIn/aws-elk-billing)
+# aws-elk-billing [![CircleCI](https://img.shields.io/circleci/project/github/airdata/foreman-in-docker.svg)](https://circleci.com/gh/airdata/foreman-in-docker)
 ![Alt text](https://raw.githubusercontent.com/PriceBoardIn/aws-elk-billing/master/screenshots/kibana-dashboard.png "Overview")
 
 ## Overview
