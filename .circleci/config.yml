@@ -11,12 +11,12 @@ jobs:
       - run:
           name: Load archived Docker image
           command: |
-            docker-compose -f docker-compose.yml build aws-elk-billing
+            docker-compose -f docker-compose-build.yml build aws-elk-billing
       - deploy:
           name: Publish Docker Image to Docker Hub
           command: |
             docker login -u "$DOCKERHUB_USER" -p "$DOCKERHUB_PASS"
-            docker-compose -f docker-compose.yml push aws-elk-billing
+            docker-compose -f docker-compose-build.yml push aws-elk-billing
 workflows:
   version: 2
   default:
